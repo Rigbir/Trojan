@@ -18,7 +18,8 @@
 
 #### The program runs in multiple threads, so all processes occur simultaneously
 
-#### Replace it with your information (d'your_gmail' and 'password_appa') in **send_file** function. (If you want test this program) 
+#### Replace it with your information (d'your_gmail' and 'password_appa') in **send_file** function. (If you want test this program)
+ 
 ```
 msg['From'] = 'your_gmail'
 msg['To'] = 'your_gmail'
