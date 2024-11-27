@@ -2,7 +2,7 @@
 
 ### Disclaimer:
 
-#### Any use of the Software not for training purposes entails criminal liability. The author used the code for educational purposes
+#### Any use of the Software not for training purposes entails criminal liability. The author used the code for educational purposes.
 
 ### How it Work (only on Windows):
 
