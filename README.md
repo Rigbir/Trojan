@@ -18,14 +18,12 @@
 
 #### The program runs in multiple threads, so all processes occur simultaneously
 
-<<<<<<< HEAD
-#### Replace it with your information (d'your_gmail' and 'password_appa') in **send_file** function. (If you want test this program)
+#### Replace it with your information ('your_gmail' and 'password_app') in __send_file__ function. (If you want test this program)
  
 ```
 msg['From'] = 'your_gmail'
 msg['To'] = 'your_gmail'
 server.login('your_gmail', 'password_app')
 ``` 
-=======
 #### Replace it with your information ('your_gmail' and 'password_appa') in send_file function. (If you want test this program) 
->>>>>>> d900bad732a2a3461c1fe2b30fb8dc008523aa6d
+
