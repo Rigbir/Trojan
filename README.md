@@ -1,29 +1,44 @@
-# Trojan
+# Trojan (Educational Project) 
 
-### Disclaimer:
+### Disclaimer
+This project is created **only for educational and research purposes**.  
+It demonstrates how malware *might* behave, to help students and security researchers understand:
+- Windows registry persistence
+- Keylogging techniques
+- Data exfiltration mechanisms
+- Multi-threaded execution
 
-#### Any use of the Software not for training purposes entails criminal liability. The author used the code for educational purposes.
+**Do not use this project for malicious purposes.**  
+Running such software outside a controlled lab environment can be **illegal**.
 
-### How it Work (only on Windows):
+---
 
-1. The program is written to Windows startup via the registry
-2. The decrypted Google database is written to a file
-3. The decrypted Microsoft Edge database is written to a file
-4. The keylogger starts working
-5. The files from the database are sent to the mail
-6. Once every 5 minutes, the keylogger file is sent to the mail
-7. Screenshots every 10 seconds and sending this folder to the mail every 2 minutes
-8. When the number of screenshots reaches 12, the folder with them is cleared
-9. All files and folders are hidden, except for the program itself
+## How It Works (Simulation)
 
-#### The program runs in multiple threads, so all processes occur simultaneously
+On Windows, the program simulates typical behaviors of a trojan:
 
-#### Replace it with your information ('your_gmail' and 'password_app') in __send_file__ function. (If you want test this program)
- 
-```
-msg['From'] = 'your_gmail'
-msg['To'] = 'your_gmail'
-server.login('your_gmail', 'password_app')
-``` 
- 
+1. Registers itself in Windows startup (persistence simulation).
+2. Reads browser databases (Google, Edge) and stores locally.
+3. Starts a keylogger (demo).
+4. Periodically "exfiltrates" data (here: to an email).
+5. Takes screenshots and manages them in a loop.
+6. Runs in multiple threads (simultaneous processes).
 
+---
+
+## Educational Use
+
+- Security students can analyze **how trojans hide and persist**.
+- Researchers can test **detection techniques** in antiviruses.
+- Developers can understand **multi-threaded system-level programming**.
+
+---
+
+## Configuration (for lab testing only )
+
+In the `__send_file__` function, replace placeholders with test credentials (e.g., a throwaway Gmail account with an app password):
+
+```python
+msg['From'] = 'your_test_email'
+msg['To'] = 'your_test_email'
+server.login('your_test_email', 'password_app')
